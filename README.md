@@ -1,16 +1,33 @@
-# React + Vite
+Salesforce Analytics Dashboard - Project Overview
+This project is a high-fidelity, React-based reproduction of a Salesforce Sales Rep Dashboard. It features a glassmorphism UI, interactive charts driven by dynamic JSON data, and a layout that mirrors the official Salesforce design.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Key Features
+Global Platform Header: Includes the gold star logo, a functional search bar with internal icon placement, and a profile section with a yellow notification indicator.
 
-Currently, two official plugins are available:
+Dynamic Analytics Grid: A 3-column responsive grid containing diverse data visualizations:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+My Pipeline: Segmented stacked bars with custom glass-striped textures for the "Negotiation" stage.
 
-## React Compiler
+My Activities: A donut chart featuring rounded segments and translucent data bubbles.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+My Top Accounts: Horizontal bars with thick rounded edges and slanted-line patterns.
 
-## Expanding the ESLint configuration
+Team Leaderboard: An overlapping layout featuring profile avatars anchored to segmented progress bars.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+JSON-Driven Architecture: All chart values, colors, and labels are stored in external JSON files for easy updates without modifying component code.
+
+Salesforce UI Fidelity: Matches specific Salesforce blue gradients, typography, and icon positioning.
+
+## Project Structure
+src/components/: Modular React components for each chart and layout section (e.g., PipelineChart, DonutChart, GlobalHeader).
+
+src/api/: JSON data files containing the dynamic values for all dashboard metrics.
+
+src/styles/dashboard.css: Centralized styling using Flexbox and CSS Grid to manage the complex Salesforce layout.
+
+## Getting Started
+Install Dependencies: Run npm install to install React and ApexCharts.
+
+Configuration: To change dashboard data, update the respective .json files in the src/api folder.
+
+Run Project: Use npm run dev to start the Vite development server.
