@@ -1,3 +1,7 @@
+
+
+
+
 /* ========= GLOBAL ========= */
 * {
   box-sizing: border-box;
@@ -11,6 +15,18 @@ body {
     radial-gradient(circle at 80% 80%, #1a5edb 0%, transparent 40%),
     linear-gradient(180deg, #0b3fa5 0%, #0c52c7 50%, #0b3fa5 100%);
   color: white;
+}
+
+
+.icon-placeholder {
+ width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 /* ========= DEVICE FRAME ========= */
@@ -236,8 +252,17 @@ body {
 
 .open-icon {
   margin-left: auto;
-  opacity: 0.7;
-  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
 }
 
 /* ===== FILTERS ===== */
@@ -798,4 +823,43 @@ body {
   font-size: 14px;
   opacity: 0.7;
   pointer-events: none;
+}
+
+/* Dark Overlay Fix */
+.card-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 8, 30, 0.85); /* Deep dark blue/black */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  z-index: 9998; /* Sits just below the expanded card */
+}
+
+/* Expanded Card Fix */
+.card.expanded {
+  position: fixed !important; /* Force it out of the grid */
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 90vw !important; /* Large width */
+  height: 85vh !important; /* Large height */
+  max-width: 1200px;
+  z-index: 9999 !important; /* Sits on top of everything */
+  background: linear-gradient(180deg, #102a61 0%, #071635 100%); /* Solid dark background for focus */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 25px;
+}
+
+/* Adjusting internal content for expanded state */
+.card.expanded .card-content {
+  height: calc(100% - 50px);
+  width: 100%;
+}
+
+/* Ensure the chart inside scales up */
+.card.expanded .apexcharts-canvas {
+  width: 100% !important;
+  height: 100% !important;
 }

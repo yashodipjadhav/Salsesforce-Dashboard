@@ -1,12 +1,12 @@
 import { FaSearch, FaChevronDown, FaTh } from "react-icons/fa";
-
+import { BiGridAlt } from "react-icons/bi";
 const Navbar = () => {
   return (
     <nav className="sf-navbar">
       {/* Left Section: App Launcher & Logo */}
       <div className="nav-section-left">
         <div className="app-launcher">
-          <FaTh />
+          <BiGridAlt />
         </div>
         <div className="brand">Sales</div>
       </div>

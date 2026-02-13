@@ -1,5 +1,5 @@
 import React from "react";
-import { FaExternalLinkAlt } from "react-icons/fa";
+import { GoArrowUpRight } from "react-icons/go";
 import leadsData from "../api/leads.json";
 
 // Dynamic SVG Circle Component
@@ -66,7 +66,7 @@ const Sidebar = () => {
       <div className="sidebar-header">
         <div className="lead-count">{leads.length}</div>
         <h4>All — Hot Leads</h4>
-        <FaExternalLinkAlt className="open-icon" />
+        <GoArrowUpRight className="open-icon" />
       </div>
 
       <div className="filters">
