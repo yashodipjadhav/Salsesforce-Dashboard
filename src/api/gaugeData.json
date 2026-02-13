@@ -1,0 +1,13 @@
+{
+  "title": "My Closed Business",
+  "currentValue": 2.4,
+  "unit": "M",
+  "currency": "$",
+  "target": 5.0,
+  "milestones": [0, 1, 1.7, 2.4, 5.0],
+  "colors": {
+    "filled": "#76E128",
+    "background": "rgba(255, 255, 255, 0.1)",
+    "highlight": "#FFE600"
+  }
+}

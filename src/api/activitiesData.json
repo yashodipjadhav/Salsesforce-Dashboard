@@ -1,0 +1,7 @@
+{
+  "label": "Record Count",
+  "activities": [
+    { "name": "Meeting", "count": 101, "color": "#76E128" },
+    { "name": "Call", "count": 11, "color": "#E6E600" }
+  ]
+}

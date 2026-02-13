@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Dario Rio",
+    "title": "Chief Financial Officer",
+    "phone": "(361) 555-7943",
+    "company": "Bodell Construction",
+    "email": "drio@example.com",
+    "score": 92,
+    "img": "https://randomuser.me/api/portraits/men/32.jpg"
+  },
+  {
+    "name": "Gai Koczar",
+    "title": "Chief Marketing Officer",
+    "phone": "(551) 555-6061",
+    "company": "Boxes Unlimited",
+    "email": "gkoczar@example.com",
+    "score": 61,
+    "img": "https://randomuser.me/api/portraits/men/44.jpg"
+  },
+  {
+    "name": "Gwendolyn Royals",
+    "title": "VP Purchasing",
+    "phone": "(662) 555-4599",
+    "company": "International Shipping",
+    "email": "groyals@example.com",
+    "score": 4,
+    "img": "https://randomuser.me/api/portraits/women/68.jpg"
+  },
+   {
+    "name": "Gwendolyn Koczar",
+    "title": "VP Purchasing",
+    "phone": "(662) 555-4599",
+    "company": "International Shipping",
+    "email": "groyals@example.com",
+    "score": 48,
+    "img": "https://randomuser.me/api/portraits/men/44.jpg"
+  }
+]

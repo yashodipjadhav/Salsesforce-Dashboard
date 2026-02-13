@@ -1,0 +1,10 @@
+{
+  "axisLabel": "Account Name",
+  "valueLabel": "Sum Of Amount",
+  "accounts": [
+    { "name": "Omega System", "amount": 268.9, "display": "268.9K", "color": "#76E128" },
+    { "name": "xPower", "amount": 223.1, "display": "223.1K", "color": "#76E128" },
+    { "name": "Accusage, Inc.", "amount": 198.4, "display": "198.4K", "color": "#76E128" },
+    { "name": "Goodman Imports", "amount": 188.2, "display": "188.2K", "color": "#FFE600" }
+  ]
+}

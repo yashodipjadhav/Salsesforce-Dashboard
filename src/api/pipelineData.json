@@ -1,0 +1,10 @@
+{
+  "totalAmount": "$2.7M",
+  "label": "Sum Of Amount",
+  "stages": [
+    { "name": "Qualification", "value": "421K", "color": "#54A2D6" },
+    { "name": "Discovery", "value": "592K", "color": "#76E128" },
+    { "name": "Proposal", "value": "1.1M", "color": "#E6E600" },
+    { "name": "Negotiation", "value": "354K", "color": "#54A2D6", "striped": true }
+  ]
+}
