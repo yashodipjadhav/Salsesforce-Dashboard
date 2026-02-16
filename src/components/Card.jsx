@@ -18,7 +18,7 @@ const Card = ({ title, children }) => {
 
   return (
     <>
-      {/* Background Dimmer: This handles the "background color change" */}
+      {/* Background Dimmer */}
       {isExpanded && (
         <div className="card-overlay" onClick={toggleExpand}></div>
       )}
@@ -36,7 +36,6 @@ const Card = ({ title, children }) => {
           </button>
         </div>
         
-        {/* The content area will now grow to fill the 80vh height */}
         <div className="card-content">
           {children}
         </div>

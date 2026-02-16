@@ -11,19 +11,22 @@ const TopAccountsChart = () => {
     chart: {
       type: "bar",
       toolbar: { show: false },
-      sparkline: { enabled: false }
+      sparkline: { enabled: false },
+      /* Added internal padding to prevent labels from clipping */
+      padding: {
+        left: 10,
+        right: 20
+      }
     },
     plotOptions: {
       bar: {
         horizontal: true,
-        /* Thick bars matching original UI density */
-        barHeight: "75%", 
-        borderRadius: 18,
-        borderRadiusApplication: 'around',
+        barHeight: "70%", /* Slightly reduced for better mobile vertical spacing */
+        borderRadius: 12,
+        borderRadiusApplication: 'end',
         distributed: true,
       }
     },
-    /* Matches the diagonal glass texture */
     fill: {
       type: "pattern",
       pattern: {
@@ -37,25 +40,33 @@ const TopAccountsChart = () => {
     dataLabels: {
       enabled: true,
       textAnchor: 'middle',
+      /* Removed the bulky background to keep text centered inside thin bars */
       formatter: (val, opts) => topAccountsData.accounts[opts.dataPointIndex].display,
       style: {
-        fontSize: "12px",
+        fontSize: "11px",
         fontWeight: "600",
         colors: ["#fff"]
       },
-      background: {
+      dropShadow: {
         enabled: true,
-        opacity: 0.15,
-        borderRadius: 12,
-        padding: 5
+        top: 1,
+        left: 1,
+        blur: 1,
+        opacity: 0.5
       }
     },
     grid: { show: false },
-    xaxis: { labels: { show: false }, axisBorder: { show: false } },
+    xaxis: { 
+      labels: { show: false }, 
+      axisBorder: { show: false },
+      axisTicks: { show: false }
+    },
     yaxis: {
-      /* Dynamic labels from JSON */
       categories: topAccountsData.accounts.map(acc => acc.name), 
       labels: {
+        /* Prevents long names from pushing the chart off-screen */
+        minWidth: 90,
+        maxWidth: 110,
         style: {
           colors: "#fff",
           fontSize: "11px",
@@ -63,7 +74,8 @@ const TopAccountsChart = () => {
         }
       }
     },
-    tooltip: { enabled: false }
+    tooltip: { enabled: false },
+    legend: { show: false }
   };
 
   return (
@@ -75,7 +87,6 @@ const TopAccountsChart = () => {
 
       <Chart options={options} series={series} type="bar" height={260} />
 
-      {/* Numeric Legend at the bottom */}
       <div className="top-accounts-footer-legend">
         {topAccountsData.accounts.map((acc, i) => (
           <div key={i} className="footer-item">

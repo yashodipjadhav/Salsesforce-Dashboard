@@ -50,6 +50,7 @@ const DonutChart = () => {
       labels: { colors: "#ffffff" },
       markers: { width: 8, height: 8, radius: 12 }
     }
+    
   };
 
   return (
