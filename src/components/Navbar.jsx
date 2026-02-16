@@ -14,7 +14,7 @@ const Navbar = () => {
       {/* Middle Section: Menu Items */}
       <div className="nav-menu">
         <button className="menu-item active">Main</button>
-        <button className="menu-item">Chatter</button>
+        <button className="menu-item">Chatter<FaChevronDown className="chevron" /></button>
         <button className="menu-item">Accounts <FaChevronDown className="chevron" /></button>
         <button className="menu-item">Contacts <FaChevronDown className="chevron" /></button>
         <button className="menu-item">Leads <FaChevronDown className="chevron" /></button>

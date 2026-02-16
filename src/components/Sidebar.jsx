@@ -1,6 +1,6 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import leadsData from "../api/leads.json";
+import leadsData from "../api/sidebar.json";
 
 // Dynamic SVG Circle Component
 const ScoreRing = ({ score }) => {
@@ -11,10 +11,10 @@ const ScoreRing = ({ score }) => {
 
   // Logic for conditional coloring
   const getStrokeColor = (val) => {
-    if (val < 20) return "#f75f00"; // Bright Red for very low scores
+    if (val < 20) return "#f75f00";
     if (val < 50) return "#e4d507";
-    if (val < 70) return "#72f507"; // Orange for medium-low scores
-    return "#00f91d";               // Original Green for high scores
+    if (val < 70) return "#72f507"; 
+    return "#00f91d";               
   };
 
   const currentColor = getStrokeColor(score);
@@ -70,8 +70,8 @@ const Sidebar = () => {
       </div>
 
       <div className="filters">
-        <div className="filter-pill">Name ▾</div>
-        <div className="filter-pill">Rating, Total Score ▾</div>
+        <div className="filter-pill">Name </div>
+        <div className="filter-pill">Rating, Total Score </div>
       </div>
 
       {leads.map((lead, index) => (

@@ -19,6 +19,13 @@
       "extraAmount": "1.2M",
       "mainColor": "#FFE600",
       "img": "https://randomuser.me/api/portraits/women/2.jpg"
+    },
+    {
+      "name": "Derrick Ditch",
+      "mainAmount": "1M",
+      "extraAmount": "1.2M",
+      "mainColor": "#54A2D6",
+      "img": "https://randomuser.me/api/portraits/men/3.jpg"
     }
   ]
 }

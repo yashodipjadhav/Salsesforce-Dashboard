@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import Card from "../components/Card";
-import DashboardHeader from "../components/DashboardHeader"; // Import the missing header
+import DashboardHeader from "../components/DashboardHeader"; 
 import GaugeChart from "../components/GaugeChart";
 import DonutChart from "../components/DonutChart";
 import PipelineChart from "../components/PipelineChart";
