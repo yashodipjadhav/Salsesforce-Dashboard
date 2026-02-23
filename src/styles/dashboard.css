@@ -219,15 +219,14 @@ body {
 
 /* Expanded state overrides */
 .card.expanded {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  width: 90vw !important;
-  height: 85vh !important;
-  z-index: 9999 !important;
-  background: linear-gradient(180deg, #102a61 0%, #071635 100%);
-  padding: 30px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  z-index: 1000;
+  border-radius: 20px;
 }
 
 .card-header {
@@ -1068,3 +1067,4 @@ body {
 .top-accounts-main-container .apexcharts-canvas {
   margin-left: -20px; 
 }
+

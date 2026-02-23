@@ -11,7 +11,9 @@ const DonutChart = () => {
     chart: {
       type: "donut",
       background: "transparent",
-      toolbar: { show: false }
+      toolbar: { show: false },
+      redrawOnParentResize: true,
+      redrawOnWindowResize: true
     },
     colors: colors,
     labels: labels,
@@ -19,51 +21,27 @@ const DonutChart = () => {
     plotOptions: {
       pie: {
         donut: {
-          size: "75%", /* Matches the hollow center */
+          size: "75%",
           labels: { show: false }
         }
       }
     },
-    dataLabels: {
-      enabled: true,
-      formatter: function (val, opts) {
-        // Displays only the numeric value in the bubble
-        return opts.w.config.series[opts.seriesIndex];
-      },
-      style: {
-        fontSize: "10px",
-        fontWeight: "bold",
-        colors: ["#fff"]
-      },
-      background: {
-        enabled: true,
-        foreColor: "#fff",
-        padding: 4,
-        borderRadius: 10,
-        opacity: 0.3, /* Translucent bubble effect */
-      },
-      dropShadow: { enabled: false }
-    },
     legend: {
       show: true,
       position: "right",
-      labels: { colors: "#ffffff" },
-      markers: { width: 8, height: 8, radius: 12 }
+      labels: { colors: "#ffffff" }
     }
-    
   };
 
   return (
-    <div className="donut-wrapper" style={{ 
-      display: 'flex', 
-      flexDirection: 'column', 
-      alignItems: 'center', 
-      height: '100%',
-      justifyContent: 'center' 
-    }}>
-      <Chart options={options} series={series} type="donut" width="100%" height="200" />
-      
-      {/* Explicit Record Count Label */}
+    <div className="donut-wrapper">
+      <Chart
+        options={options}
+        series={series}
+        type="donut"
+        width="100%"
+        height="100%"
+      />
       <div className="record-count-text">
         {activitiesData.label}
       </div>
