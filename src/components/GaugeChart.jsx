@@ -1,6 +1,6 @@
 import React from "react";
 import Chart from "react-apexcharts";
-import gaugeData from "../api/gaugeData.json"; // Path to your new JSON file
+import gaugeData from "../api/gaugeData.json"; 
 
 const ClosedBusinessGauge = () => {
   // Dynamic series calculation based on JSON

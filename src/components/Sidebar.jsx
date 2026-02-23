@@ -62,7 +62,6 @@ const Sidebar = () => {
         <span className="active-tab">Lead & Campaigns</span>
         <span>Activity</span>
       </div>
-
       <div className="sidebar-header">
         <div className="lead-count">{leads.length}</div>
         <h4>All — Hot Leads</h4>

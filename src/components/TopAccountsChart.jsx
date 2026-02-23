@@ -91,7 +91,7 @@ const TopAccountsChart = () => {
         {topAccountsData.accounts.map((acc, i) => (
           <div key={i} className="footer-item">
             <span className="square-marker" style={{ backgroundColor: acc.color }}></span>
-            <span className="index-label">{i + 1}</span>
+
           </div>
         ))}
       </div>
