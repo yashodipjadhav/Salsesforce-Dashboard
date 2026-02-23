@@ -1,7 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaRegClock, FaChevronDown } from "react-icons/fa";
 
 const DashboardHeader = () => {
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // Update time every second
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer); // cleanup
+  }, []);
+
+  // Format Date
+  const formattedDate = currentTime.toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
+  // Format Time
+  const formattedTime = currentTime.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+  });
+
   return (
     <div className="dashboard-header-container">
       {/* Top Breadcrumb Style Tab */}
@@ -17,7 +42,9 @@ const DashboardHeader = () => {
           </div>
           <div className="title-stack">
             <h2>Sales Rep Simple Dashboard</h2>
-            <p>As of Apr 18, 2023, 11:31 AM | Viewing as Saxton Randle</p>
+            <p>
+              As of {formattedDate}, {formattedTime} | Viewing as Saxton Randle
+            </p>
           </div>
         </div>
 
